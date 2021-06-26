@@ -1,0 +1,440 @@
+1) Introduction
+
+2) Software Installations
+
+3) Angular Application
+
+4) Directives in Angular
+
+5) Services in Angular
+
+6) Rest API Calls
+
+7) Spring Boot Integration
+
+8) 3rd party API'S Integration		ng-http-loader
+
+9) Host in AWS Server
+
+10) Single Page Application
+
+				
+
+
+Software Installations
+
+
+1) download and install NodeJS
+
+
+	"npm" stands for node packaging manager.
+
+	"npm" helps to install the Angular.
+
+
+website : https://nodejs.org/en/download/
+
+file    : node-v14.17.1-x64.msi
+
+
+
+2) install yarn tool
+
+	"yarn" tool given by facebook.
+
+	"yarn" tool, used to download the 3rd party libraries.
+
+	"yarn" tool installation is commnad based installation.
+
+	> npm install -g yarn
+
+
+
+3) install angular12
+
+	> npm install -g @angular/cli@11.2.3
+
+
+	- cli stands for command line interface
+
+	- cli helps to create and execute the angular applications
+
+	
+
+
+4) install Visual Studio Code
+
+	website : https://code.visualstudio.com/docs/?dv=win
+
+	file    : VSCodeUserSetup-x64-1.57.1.exe
+
+
+
+
+Steps to create the First Angular Application
+
+
+1) create the directory
+
+
+2) create the angular application
+
+
+	> ng new firstApp
+
+
+3) switch to angular application
+
+	> cd firstApp
+
+
+4) execute the angular application
+
+	> ng s -o
+
+	"s" stands for "serve"
+
+	"-o" stands for open the default browser
+
+	Default Port Number of Angular Application is 4200
+
+
+
+					***** component *****
+
+
+Reusable portion of complex UI Called as Component.
+
+We can create more than one "Component".
+
+These Components are "Reusable" Components.
+
+Angular Applications are "Component" Based Applications
+
+Because of components code reusability is "high" in angular.
+
+**********************************************
+component-app
+            src
+			   app
+			     first.component.ts
+				 first.component.html
+
+				 app.module.ts
+			   index.html
+**********************************************
+
+
+
+*************************************************
+serviceApp
+         src
+		   app
+		     services
+			    my.service.ts
+
+			 components
+			 	first.component.ts
+				first.component.html
+
+				second.component.ts
+				second.component.html
+			 app.module.ts
+			index.html
+*****************************************************
+
+
+
+
+**************************************************************
+serviceEx2
+		  src
+		     app
+			    services
+				     login.service.ts
+
+				components
+					 login.component.ts
+					 login.component.html
+
+				app.module.ts
+			  index.html	
+***************************************************************
+
+							***** Spring Boot Integration ******
+
+1) run the backend service
+
+	> java -jar Mini-Project-0.0.1-SNAPSHOT.jar
+
+
+2) test the rest api call with Postman.
+
+	> http://localhost:5000/api/v1/products
+
+
+3) create the model
+
+	***********************************
+	springBootEx
+	           src
+			     app
+				   model
+				   	  product.model.ts
+	************************************
+		finally "Product" model is ready
+
+
+4) create the service
+
+	*********************************************
+	springBootEx
+		       src
+			     app
+				   services
+				   	 product.service.ts
+	*********************************************
+
+		"productService" is ready with getAllProducts() function
+
+
+5) create the component
+
+	********************************************
+	springBootEx
+			  src
+			    app
+				  components
+				     product.component.ts
+					 product.component.html
+	********************************************
+
+
+PROJECT IMPLEMENTATION
+======================
+
+1) download the libraries to implement state management.
+
+		> cd ecommerce
+
+		> yarn add @ngrx/store@11.0.1 @ngrx/effects@11.0.1 --save
+
+
+2) test the rest api call with Postman
+
+	=> http://localhost:8080/api/products
+
+
+3) create the model
+
+	**********************************************
+	ecommerce
+		   src
+		     app
+			   Home
+			     model
+				   product.model.ts
+	**********************************************
+		finally "Product" model is ready.
+
+
+4) create the service
+
+	*********************************************
+	ecommerce
+		    src
+			  app
+			  	Home
+				   service
+				   	  product.service.ts
+	**********************************************
+		finally "productService" is ready with "getAllProducts()" function.
+
+
+5) create the intreceptor
+
+	********************************************
+	ecommerce
+	        src  
+			  app
+			    Home
+				  intreceptor
+				  	product.intreceptor.ts
+	*******************************************
+			finally "productIntreceptor" is ready
+
+
+6) create the actions
+
+	********************************************************
+	ecommerce
+		    src  
+			  app
+			    Home
+				  actions
+				    product.actions.ts
+	********************************************************
+
+
+7) create the effects
+
+	************************************************
+	ecommerce
+		   src
+		     app
+			   Home
+			     effects
+				 	product.effects.ts
+	************************************************
+
+			finally "productEffects" are ready
+
+
+8) create the reducer
+
+	***********************************************
+	ecommerce
+		    src
+			  app
+			  	Home
+				  reducer
+				  	product.reducer.ts
+	***********************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
