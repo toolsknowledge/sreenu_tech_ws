@@ -1,0 +1,17 @@
+<ng-http-loader></ng-http-loader>
+
+<div class="row center">
+    <div *ngFor="let obj of products">
+        <div class="card">
+            <a href="#">
+                <img src={{obj.image}} alt={{obj.name}}>
+            </a>
+            <div class="card-body">
+                <h2>{{obj.name}}</h2>
+                <div class="price">
+                    Price $ {{obj.cost}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

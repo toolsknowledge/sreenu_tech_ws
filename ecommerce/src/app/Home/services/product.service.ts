@@ -8,6 +8,6 @@ import { Product } from "../model/product.model";
 export class productService{
     constructor(private http:HttpClient){}
     public getAllProducts():Observable<Product[]>{
-        return this.http.get<Product[]>(`http://localhost:8080/api/products`);
+        return this.http.get<Product[]>(`http://sreenutechws-env.eba-dqjwnwzn.ap-south-1.elasticbeanstalk.com/api/products`);
     }
 }

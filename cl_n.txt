@@ -301,12 +301,97 @@ PROJECT IMPLEMENTATION
 				  	product.reducer.ts
 	***********************************************
 
+		- finally "productReducer" is ready.
+
+
+9) create the store
+
+	************************************************
+	ecommerce
+		    src
+			  app
+			    Home
+				   module
+				      product.module.ts   (custom module)
+	************************************************
+
+
+10) create the selector
+	*****************************************************
+	ecommerce
+			src
+			  app
+			    Home	
+				  selector
+				  	 product.selector.ts
+	*****************************************************
+
+
+
+11) create the component
+
+		***************************************************
+		ecommerce
+			    src
+				  app
+				    Home	
+					   components
+					   		product.component.ts
+							product.component.html
+		****************************************************
 
 
 
 
+angular aws deployment
+======================
+1) install aws cli tool.
+
+	website : https://aws.amazon.com/cli/
+
+	file     : AWSCLIV2.msi
 
 
+2) create the angular build file
+
+		> ng build
+
+
+3) create the configuration credentials in AWS Server
+		IAM
+
+4) create the s3 bucket , enable static webhosting and edit bucket policies
+
+		bucket policy code :
+
+		{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::sreenutechws/*"
+            ]
+        }
+    ]
+	}
+
+
+5) change the package.json file
+
+	"aws-deploy":"aws s3 sync dist/ecommerce/ s3://sreenutechws"
+
+
+6) run the below command
+
+	> aws configure
+
+	> ng build && npm run aws-deploy
 
 
 

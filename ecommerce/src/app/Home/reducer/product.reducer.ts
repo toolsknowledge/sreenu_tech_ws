@@ -14,8 +14,11 @@ const initialState:IState = {
 }
 
 
-const productReducer = (state=initialState,actions:ProductActionTypes):IState=>{
-    switch(actions.type){
+
+
+
+const productReducer = (state=initialState,action:ProductActionTypes):IState=>{
+    switch(action.type){
         case ProductActions.ProductsLoading:
             return{
                 ...state,
@@ -27,7 +30,7 @@ const productReducer = (state=initialState,actions:ProductActionTypes):IState=>{
             return{
                 ...state,
                 loading:true,
-                products:actions.products,
+                products:action.products,
                 error:""
             }
         case ProductActions.ProductsLoadingFail:
@@ -35,16 +38,13 @@ const productReducer = (state=initialState,actions:ProductActionTypes):IState=>{
                 ...state,
                 loading:true,
                 products:[],
-                error:actions.err
+                error:action.err
             }
-
         default:
             return state;
     }
 };
-
 export default productReducer;
-
 
 
 
